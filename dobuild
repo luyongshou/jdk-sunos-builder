@@ -271,6 +271,7 @@ do_unpack() {
     mver=$(major_java_version $JDKVER)
     tball="$2"
     $TAR xf $tball
+    echo $tball
     cd $JDKVER || bail "unpack failed"
     cat ${JPATCHDIR}/${mver}/${JDKVER}.pls | while read patcharg patchfile
     do
