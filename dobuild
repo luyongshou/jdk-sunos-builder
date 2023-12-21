@@ -272,6 +272,10 @@ do_unpack() {
     tball="$2"
     $TAR xf $tball
     echo $tball
+    if [ "/var/tmp/java/tarballs/jdk12u-jdk-12.0.2+10.tar.gz" == $tball ]; then
+        mv jdk12u-jdk-12.0.2-10 jdk12u-jdk-12.0.2+10
+    fi
+
     cd $JDKVER || bail "unpack failed"
     cat ${JPATCHDIR}/${mver}/${JDKVER}.pls | while read patcharg patchfile
     do
