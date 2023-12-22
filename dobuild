@@ -256,7 +256,7 @@ do_download() {
     # and then putting the first - back
     jdl=${jdl//-/+}
     echo "jd1_1=$jdl"
-    # jdl=${jdl/+/-}
+    jdl=${jdl/+/-}
     echo "jd1_2=$jdl"
     jurl="https://github.com/openjdk/${jver}/archive/refs/tags/${jdl}.tar.gz"
     echo "Download: wget -O ${JCACHEDIR}/${JDKVER}.tar.gz $jurl"
