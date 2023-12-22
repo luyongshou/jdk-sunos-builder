@@ -254,7 +254,7 @@ do_download() {
     echo "jd1_0=$jdl"
     # replace the last - with +, by first replacing all
     # and then putting the first - back
-    # jdl=${jdl//-/+}
+    jdl=${jdl//-/+}
     echo "jd1_1=$jdl"
     # jdl=${jdl/+/-}
     echo "jd1_2=$jdl"
