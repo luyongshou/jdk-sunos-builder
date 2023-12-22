@@ -251,6 +251,7 @@ do_download() {
     jver=${JDKVER%%-*}
     # jdl is the tag, which has the repo name pulled off
     jdl=${JDKVER#$jver-}
+    echo "jd1_0=$jdl"
     # replace the last - with +, by first replacing all
     # and then putting the first - back
     jdl=${jdl//-/+}
